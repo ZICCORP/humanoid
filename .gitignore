@@ -1,0 +1,8 @@
+# ignore all envs
+*.env
+
+# ignore vscode
+*.vscode
+
+# ignore .lock
+*.lock

@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% block head %}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Humanoid</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="all,follow" />
+
+
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+
+  <!-- Custom Css -->
+
+  <link rel="stylesheet" href="{% static 'css/style.default.css' %}">
+
+
+  {% endblock head %}
+</head>
+
+<body>
+  <!-- Navigation Area -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light" style="background-color: #ffffff !important;">
+    <a href="" class="navbar-brand"><img src="{% static 'img/logo_size.jpg' %}" alt="" height="80"></a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#trump" aria-controls="trump"
+      aria-expanded="false" aria-label="Toggle navigation" type="button"><span
+        class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="trump">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a href="{% url 'home' %}"
+            class="nav-link  {% if request.path == '/' %}active{% endif %}">Home</a></li>
+        <li class="nav-item"><a href="{% url 'about' %}"
+            class="nav-link {% if request.path == '/about' %}active{% endif %}">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  {% block content %}
+  {% endblock content %}
+
+  <footer class="page-footer font-small stylish-color-dark pt-4 mt-4" style="margin-top: -2em;">
+    <div class="footer-copyright py-3 text-center">
+      copyright &copy; 2020 A Frank Chuka production
+    </div>
+  </footer>
+
+
+  <!-- JavaScript files-->
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+  
+
+
+  a.nav-link {
+       color: #000000 !important;
+       font-size: .7em;
+  }
+ a.nav-link.active {
+    color:#999 !important;
+    font-weight: bold;
+    
+}
+
+button:focus {
+  outline: none;
+}
+
+
+li a {
+  border: none !important;
+  font-size: .8em;
+}
+
+ a:hover {
+  text-decoration: none;
+ 
+}
+
+.navbar-toggler{
+  
+    border: none;
+}
+
+ 
+div.text-center {
+  font-size: .5em !important;
+}
+
+.date {
+  font-size: .7em !important;
+}
+
+.container {
+  margin-left: -.1em;
+}
